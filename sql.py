@@ -19,3 +19,6 @@ with sqlite3.connect('sample.db') as connection:
     c.execute('INSERT INTO posts VALUES(2, "Well", "I\'m well.", 1002)')
     c.execute('INSERT INTO posts VALUES(3, "Excellent", "I\'m excellent.", 1003)')
     c.execute('INSERT INTO posts VALUES(4, "Okay", "I\'m okay.", 1004)')
+
+# Save (commit) the changes
+connection.commit()
