@@ -9,7 +9,7 @@ with sqlite3.connect('sample.db') as connection:
 
     # delete existing table since id and author_id columns are missing
     # modified on 07/10/2014 SUHAN
-    c.execute('DROP TABLE posts')
+    c.execute('DROP TABLE IF EXISTS posts')
 
     # create the table
     c.execute('CREATE TABLE posts(id INTEGER, title TEXT, description TEXT, author_id INTEGER)')
